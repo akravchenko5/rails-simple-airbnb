@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Simple Airbnb</a>
+</nav>
+
+<div class="container">
+  <h1 class="mt-3">All our flats (<%= @flats.length %>) </h1>
+  <div class="row mt-4">
+    <% @flats.each do |flat| %>
+    <div class="col-4 d-flex align-items-stretch mb-4">
+      <div class="card shadow-sm">
+          <img src="<%= flat.picture_url %>" class="card-img-top" style="height: 220px" alt="...">
+          <div class="card-body pb-2">
+            <h5 class="card-title"><%= flat.name %></h5>
+            <p class="card-text text-muted font-weight-light"><%= flat.address %></p>
+            <ul class="list-inline mb-1">
+              <li class="list-inline-item btn btn-outline-primary btn-sm">More info</li>
+              <li class="list-inline-item btn btn-outline-warning btn-sm">Edit</li>
+              <li class="list-inline-item btn btn-outline-danger btn-sm">Remove</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
