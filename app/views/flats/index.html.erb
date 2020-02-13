@@ -12,6 +12,10 @@
           <div class="card-body pb-2">
             <h5 class="card-title"><%= flat.name %></h5>
             <p class="card-text text-muted font-weight-light"><%= flat.address %></p>
+            <ul class="list-inline mb-1 d-flex justify-content-between">
+              <li class="text-muted"><i class="fas fa-user-friends mr-2"></i><%= flat.number_of_guests%></li>
+              <li class="font-weight-bold"><%= flat.price_per_night%><i class="fas fa-euro-sign ml-2"></i></li>
+            </ul>
             <ul class="list-inline mb-1">
               <li class="list-inline-item btn btn-outline-primary btn-sm">More info</li>
               <li class="list-inline-item btn btn-outline-warning btn-sm">Edit</li>
